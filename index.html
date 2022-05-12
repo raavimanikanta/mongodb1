@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        <pre>
+        > show collections
+Human_Resourse
+student
+> db.Human_Resourse.find().pretty()
+{
+        "_id" : ObjectId("627bb55a13836d8bcbf1ebbd"),
+        "name" : "employee1",
+        "salary" : 25000,
+        "exp" : 2
+}
+{
+        "_id" : ObjectId("627bb75113836d8bcbf1ebbe"),
+        "name" : "employee1",
+        "salary" : 25000,
+        "exp" : "4"
+}
+{
+        "_id" : ObjectId("627bb75113836d8bcbf1ebbf"),
+        "name" : "employee2",
+        "salary" : 30000,
+        "exp" : "3"
+}
+{
+        "_id" : ObjectId("627bb75113836d8bcbf1ebc0"),
+        "name" : "employee3",
+        "salary" : 35000,
+        "exp" : 5
+}
+</pre>
+    </p>
+    <p>
+        <pre>
+            > db.Human_Resourse.find({salary:{$gt:25000}}).pretty()
+            {
+                    "_id" : ObjectId("627bb75113836d8bcbf1ebbf"),
+                    "name" : "employee2",
+                    "salary" : 30000,
+                    "exp" : "3"
+            }
+            {
+                    "_id" : ObjectId("627bb75113836d8bcbf1ebc0"),
+                    "name" : "employee3",
+                    "salary" : 35000,
+                    "exp" : 5
+            }
+        </pre>
+    </p>
+    <p>
+        <pre>
+            > db.Human_Resourse.find({exp:{$gt:"3"}}).pretty()
+     {
+        "_id" : ObjectId("627bb75113836d8bcbf1ebbe"),
+        "name" : "employee1",
+        "salary" : 25000,
+        "exp" : "4"
+     }
+        </pre>
+    </p>
+</body>
+</html>
